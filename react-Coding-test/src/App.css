@@ -1,0 +1,30 @@
+/* ...existing styles... */
+
+/* Desktop view styles */
+@media (min-width: 768px) {
+  .app-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .desktop-view {
+    display: flex;
+    width: 100%; /* Use the full width for the desktop view */
+    max-width: 1200px; /* You can adjust this as needed */
+  }
+
+  .detail-view-desktop {
+    flex-grow: 2; /* Allow the detail view to take up more space */
+    display: flex; /* This will ensure the child div (DetailView) is a flex item */
+  }
+}
+
+/* Mobile view, hide the desktop detail view */
+@media (max-width: 767px) {
+  .detail-view-desktop {
+    display: none;
+  }
+}

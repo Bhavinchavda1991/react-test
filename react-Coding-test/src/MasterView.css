@@ -1,0 +1,83 @@
+/* MasterView.css */
+
+.master-view {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  overflow-y: auto;
+  max-height: 100vh;
+  padding-left: 20px;
+  overflow-x: clip;
+}
+
+.master-view .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #e1e4e8;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  text-align: left;
+  cursor: pointer;
+}
+
+.master-view .item:last-child {
+  border-bottom: none;
+}
+
+.master-view .item:hover {
+  background-color: #f7f7f7;
+}
+
+.master-view .item img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-left:-15px;
+}
+
+.master-view .item h3 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.master-view .item p {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.master-view .item .price {
+  color: #333;
+  font-weight: bold;
+}
+
+.master-view .item.selected {
+  background-color: #e6f7ff;
+}
+
+.master-view .item.selected img {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.master-view .item:hover {
+  cursor: pointer;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .master-view {
+    max-width: 100%;
+    margin-right: 0; 
+  }
+}
